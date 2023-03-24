@@ -1,5 +1,11 @@
 'use strict';
 
+let headerEl = document.querySelector('header');
+let img = document.createElement('img');
+img.src = '../assets/duck.jpg';
+img.alt = 'duck image';
+headerEl.insertBefore(img, headerEl.firstChild);
+
 // State object keeps track of the application state (all available products and current state of the user's cart)
 const state = {
   allProducts: [],
