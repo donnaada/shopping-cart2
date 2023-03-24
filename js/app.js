@@ -2,7 +2,7 @@
 
 let headerEl = document.querySelector('header');
 let img = document.createElement('img');
-img.src = '../assets/duck.jpg';
+img.src = './assets/duck.jpg';
 img.alt = 'duck image';
 headerEl.insertBefore(img, headerEl.firstChild);
 
