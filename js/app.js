@@ -1,5 +1,11 @@
 'use strict';
 
+let headerEl = document.querySelector('header');
+let img = document.createElement('img');
+img.src = '../assets/duck.jpg';
+img.alt = 'duck image';
+headerEl.insertBefore(img, headerEl.firstChild);
+
 // State object keeps track of the application state (all available products and current state of the user's cart)
 const state = {
   allProducts: [],
@@ -14,19 +20,29 @@ const Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  const newItem = new CartItem(product,quantity);
+  this.items.push(newItem);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  let cart = JSON.stringify(this.items);
+  localStorage.setItem('cart', cart);
 };
 
-Cart.prototype.removeItem = function(item) {
+Cart.prototype.removeItem = function(name) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  // this.items.splice(name, 1);
+  this.items = this.items.filter(item => item.product !== name);  
+  console.log(name);
+
 };
 
 Cart.prototype.updateCounter = function() {
   // TODO: Update the cart count in the header nav with the number of items in the Cart
+  let itemCountEl = document.getElementById('itemCount');
+  itemCountEl.innerText = this.items.length;
 }
 
 const CartItem = function(product, quantity) {
