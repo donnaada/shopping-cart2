@@ -6,6 +6,10 @@ body {
   color: #222;
   background: #f7f5f0;
   line-height: 1.5;
+  font-size: 13px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: scroll;
 }
 
 .nav {
@@ -18,13 +22,23 @@ body {
   margin-bottom: 30px;
 }
 
+main{
+  height: calc(100vh - 45vh);
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
 
 header h1 {
   font-weight: 700;
-  font-size: 50px;
-
+  font-size: 1.5em;
 }
-
 
 .card header {
   margin-bottom: 20px;
@@ -35,7 +49,6 @@ header h1 {
   margin: 30px auto;
 }
 
-
 img {
   height: 150px;
   width: 150px;
@@ -44,36 +57,60 @@ img {
 }
 
 #itemCount {
-  margin: 10px;
+  margin: 5px;
   font-family: 'Roboto', sans-serif;
   border: 1px solid black;
-  padding: 4px;
+  padding: 4px 8px;
   border-radius: 50px;
 }
 
 
 #catalog {
   border: 3px solid #bc5d67;
-  padding: 30px;
-  width: 75%;
+  /* padding: 30px; */
+  width: 90%;
+  padding: 10px;
   margin: 30px auto;
   border-radius: 10px;
+}
+
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+fieldset legend{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+fieldset label{
+margin: 5px;
+}
+
+fieldset input[type="submit"]{
+  align-self: center;
+  margin: 10px 0;
 }
 
 #cartContents {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
-  margin: 30px 30px;
+  align-items: baseline;
+  margin: 10px;
+  border-radius: 10px;
+  border: 3px solid #bc5d67;
+  min-height: 25px;
 }
-
-
 
 footer {
   position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 30px;
-  padding: 20px 0 40px 20px;
+  background-color: rgb(149, 148, 148);
 }
