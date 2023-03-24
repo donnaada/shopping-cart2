@@ -1,6 +1,25 @@
 body {
-
+  margin: 0;
+  padding: 0;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background: #f7f5f0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+header h1 {
+  font-weight: 700;
+
 }
 
 #cart {
@@ -26,7 +45,7 @@ itemCount {
 
 
 #catalog {
-  border: 3px solid #283618;
+  border: 3px solid #bc5d67;
   padding: 30px;
   width: 75%;
   margin: 30px auto;
@@ -39,4 +58,10 @@ itemCount {
   justify-content: space-around;
   align-items: center;
   margin: 30px 30px;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
 }

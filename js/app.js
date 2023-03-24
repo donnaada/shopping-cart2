@@ -26,7 +26,7 @@ Cart.prototype.saveToLocalStorage = function() {
 
 Cart.prototype.removeItem = function(name) {
   
-  this.items = this.items.filter(item => item !== name);
+  this.items = this.items.filter(item => item.product !== name);
 
 };
 
