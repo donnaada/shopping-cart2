@@ -1,1 +1,42 @@
-/* TODO: Make it awesome */
+body {
+
+  text-align: center;
+}
+
+#cart {
+  text-align: center;
+  margin: 30px auto;
+}
+
+
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 40%;
+  margin: 10px;
+}
+
+itemCount {
+  margin: 10px;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 50px;
+}
+
+
+#catalog {
+  border: 3px solid #283618;
+  padding: 30px;
+  width: 75%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+#cartContents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 30px;
+}
