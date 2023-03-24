@@ -44,7 +44,7 @@ function showCart() {
     let delLinkEl = document.createElement('a');
     delLinkEl.href ='#';
     delLinkEl.setAttribute('data-cartitem',item.product)
-    delLinkEl.textContent = 'Delete';
+    delLinkEl.textContent = 'X';
     tdLinkEl.appendChild(delLinkEl);
 
     tdQtyEl.textContent = item.quantity;
@@ -54,9 +54,10 @@ function showCart() {
 
     // TODO: Add the TR to the TBODY and each of the TD's to the TR
     tbodyEl.appendChild(trEl);
-    trEl.appendChild(tdItemEl);
-    trEl.appendChild(tdQtyEl);
     trEl.appendChild(delLinkEl);
+    trEl.appendChild(tdQtyEl);
+    trEl.appendChild(tdItemEl);
+    
 
   }
 }
